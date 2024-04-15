@@ -1,0 +1,100 @@
+(pydantic-cant-use-config-py3.11) C:\dev\pydantic_cant_use_config>python main.py
+Traceback (most recent call last):
+  File "C:\dev\pydantic_cant_use_config\main.py", line 18, in <module>
+    model_schema = Child.model_json_schema()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\main.py", line 414, in model_json_schema
+    return model_json_schema(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 2241, in model_json_schema
+    return schema_generator_instance.generate(cls.__pydantic_core_schema__, mode=mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 412, in generate
+    json_schema: JsonSchemaValue = self.generate_inner(schema)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 551, in generate_inner
+    json_schema = current_handler(schema)
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 36, in __call__
+    return self.handler(core_schema)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 525, in new_handler_func
+    json_schema = js_modify_function(schema_or_field, current_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\main.py", line 633, in __get_pydantic_json_schema__
+    return handler(core_schema)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 36, in __call__
+    return self.handler(core_schema)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 525, in new_handler_func
+    json_schema = js_modify_function(schema_or_field, current_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 219, in modify_model_json_schema
+    json_schema = handler(schema_or_field)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 36, in __call__
+    return self.handler(core_schema)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 508, in handler_func
+    json_schema = generate_for_schema_type(schema_or_field)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 1392, in model_schema
+    json_schema = self.generate_inner(schema['schema'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 551, in generate_inner
+    json_schema = current_handler(schema)
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 36, in __call__
+    return self.handler(core_schema)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 508, in handler_func
+    json_schema = generate_for_schema_type(schema_or_field)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 1484, in model_fields_schema
+    json_schema = self._named_required_fields_schema(named_required_fields)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 1295, in _named_required_fields_schema
+    field_json_schema = self.generate_inner(field).copy()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 551, in generate_inner
+    json_schema = current_handler(schema)
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 36, in __call__
+    return self.handler(core_schema)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 543, in new_handler_func
+    json_schema = js_modify_function(schema_or_field, current_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\_internal\_generate_schema.py", line 2176, in json_schema_update_func
+    json_schema = {**handler(core_schema_or_field), **json_schema_update}
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 36, in __call__
+    return self.handler(core_schema)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 508, in handler_func
+    json_schema = generate_for_schema_type(schema_or_field)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 1363, in model_field_schema
+    return self.generate_inner(schema['schema'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 551, in generate_inner
+    json_schema = current_handler(schema)
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\_internal\_schema_generation_shared.py", line 36, in __call__
+    return self.handler(core_schema)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 508, in handler_func
+    json_schema = generate_for_schema_type(schema_or_field)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 1056, in default_schema
+    encoded_default = self.encode_default(default)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\json_schema.py", line 2047, in encode_default
+    else TypeAdapter(type(dft), config=config.config_dict).dump_python(dft, mode='json')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JLr\AppData\Local\pypoetry\Cache\virtualenvs\pydantic-cant-use-config-knYWf0wc-py3.11\Lib\site-packages\pydantic\type_adapter.py", line 198, in __init__
+    raise PydanticUserError(
+pydantic.errors.PydanticUserError: Cannot use `config` when the type is a BaseModel, dataclass or TypedDict. These types can have their own config and setting the config via the `config` parameter to TypeAdapter will not override it, thus the `config` you passed to TypeAdapter becomes meaningless, which is probably not what you want.
+
+For further information visit https://errors.pydantic.dev/2.7/u/type-adapter-config-unused
